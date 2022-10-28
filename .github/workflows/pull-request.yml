@@ -1,7 +1,7 @@
 name: Pull Request 
 on: [pull_request]
 jobs: 
-  PullRequest
+  PullRequest:
   runs-on: ubuntu-latest
   steps: 
     - run: echo "Check"
@@ -12,6 +12,6 @@ jobs:
         envkey_POSTGRES_USER: "postgres"
         envkey_POSTGRES_PASSWORD: "postgres"
         envkey_POSTGRES_DB: "cicd"
-        envkey_POSTGRES_URL: postgres://postgres:postgres@cicd:5432/cicd?schema=public
+        envkey_POSTGRES_URL: postgres://postgres:postgres@postgres_ci_cd:5432/cicd?schema=public
     - name: RUN TESTS
       run: docker-compose -f docker-compose-test.yml run node_ci_cd npm run test
