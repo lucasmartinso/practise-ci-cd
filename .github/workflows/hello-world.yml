@@ -1,6 +1,5 @@
 name: HelloWorld 
 on: [push]
-
 jobs: 
   HelloWorld: 
     runs-on: ubuntu-latest
