@@ -7,8 +7,6 @@ services:
       - 1313:5432
     env_file:
       - .env.test
-    volumes:
-      - postgres_ci_cd:/var/lib/postgresql/data
   
 
   node_ci_cd: 
@@ -20,6 +18,3 @@ services:
       - .env.test
     depends_on:
       - postgres_ci_cd
-    
-volumes:
-  postgres_ci_cd:
