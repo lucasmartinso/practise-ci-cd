@@ -1,11 +1,11 @@
-name: HelloWorld 
+name: Hello World 
 on: [push]
 jobs: 
   HelloWorld: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout branch 
-      uses: action/checkout@v3
-      - name: Message 
-      uses: echo DONEEEEEEEEEEE
-      - name: ls ${{ github.workspace }}
+        uses: action/checkout@v3 
+      - run: echo DONEEEEEEEEEEE
+      - name: List files
+        run: ls ${{ github.workspace }}
