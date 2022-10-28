@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Checkout branch 
         uses: actions/checkout@v3 
-      - run: echo ${{ secrets.MESSAGE }}
+      - run: echo ${{secrets.MESSAGE}}
       - name: List files
         run: ls ${{ github.workspace }}
