@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - run: echo "Check"
+      - name: Checkout branch
         uses: actions/checkout@v3
       - name: Make new envfile 
         uses: SpicyPizza/create-envfile@v1
