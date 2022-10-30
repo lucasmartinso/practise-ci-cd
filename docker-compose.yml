@@ -12,7 +12,7 @@ services:
     container_name: node_ci_cd
     build: ./
     ports: 
-    - 5000:5000 
+      - 5000:5000 
     depends_on:
       - postgres_ci_cd
     env_file:
